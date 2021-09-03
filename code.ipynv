@@ -1,0 +1,219 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled1.ipynb",
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "76ZIPbwpLwYO"
+      },
+      "source": [
+        "fd = open(\"products.json\",'r')\n",
+        "\n",
+        "txt =  fd.read()\n",
+        "\n",
+        "fd.close()"
+      ],
+      "execution_count": 5,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 103
+        },
+        "id": "Ud05vL1DMgYQ",
+        "outputId": "471c289c-87cd-4b56-f73c-d6d7216546c5"
+      },
+      "source": [
+        "txt"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'{\"1001\": {\"name\": \"aata\", \"price\": 200, \"quantity\": 40, \"brand\": \"ashirvad\", \"size\": \"small\"}, \"1002\": {\"name\": \"bun\", \"price\": 20, \"quantity\": 15, \"brand\": \"fresh choice\", \"size\": \"small\"}, \"1003\": {\"name\": \"biscut\", \"price\": 30, \"quantity\": 20, \"brand\": \"biskfarm\", \"size\": \"medium\"}, \"1004\": {\"name\": \"butter\", \"price\": 45, \"quantity\": 10, \"brand\": \"amul\", \"size\": \"small\"}, \"1005\": {\"name\": \"brownsugar\", \"price\": 70, \"quantity\": 14, \"brand\": \"ashirvad\", \"size\": \"medium\"}, \"1006\": {\"name\": \"creame sauce\", \"price\": 120, \"quantity\": 15, \"brand\": \" delight\", \"size\": \"small\"}, \"1007\": {\"name\": \"chocolates\", \"price\": 60, \"quantity\": 20, \"brand\": \"dairy milk\", \"size\": \"medium\"}, \"1008\": {\"name\": \"chicken broth\", \"price\": 80, \"quantity\": 10, \"brand\": \"homecooking\", \"size\": \"small\"}, \"1009\": {\"name\": \"cereal\", \"price\": 250, \"quantity\": 12, \"brand\": \"kellogs\", \"size\": \"big\"}, \"1010\": {\"name\": \"dryfruits\", \"price\": 120, \"quantity\": 30, \"brand\": \"herbals\", \"size\": \"medium\"}, \"1011\": {\"name\": \"flour\", \"price\": 150, \"quantity\": 50, \"brand\": \"ashirvad\", \"size\": \"big\"}, \"1012\": {\"name\": \"flax seeds\", \"price\": 60, \"quantity\": 13, \"brand\": \"herbals\", \"size\": \"small\"}, \"1013\": {\"name\": \"garlic powder\", \"price\": 50, \"quantity\": 10, \"brand\": \"hebals\", \"size\": \"small\"}, \"1014\": {\"name\": \"ice cream\", \"price\": 30, \"quantity\": 24, \"brand\": \"amul\", \"size\": \"medium\"}, \"1015\": {\"name\": \"jam\", \"price\": 40, \"quantity\": 15, \"brand\": \"kissan\", \"size\": \"medium\"}, \"1016\": {\"name\": \"jaggery\", \"price\": 35, \"quantity\": 16, \"brand\": \"select\", \"size\": \"medium\"}, \"1017\": {\"name\": \"juice\", \"price\": 25, \"quantity\": 20, \"brand\": \"real\", \"size\": \"small\"}, \"1018\": {\"name\": \"mustard seed\", \"price\": 15, \"quantity\": 13, \"brand\": \"select\", \"size\": \"small\"}, \"1019\": {\"name\": \"canned tomatoes\", \"price\": 40, \"quantity\": 15, \"brand\": \"home cooking\", \"size\": \"small\"}, \"1020\": {\"name\": \"sprouts\", \"price\": 20, \"quantity\": 15, \"brand\": \"home cooking\", \"size\": \"small\"}, \"1021\": {\"name\": \"onion powder\", \"price\": 35, \"quantity\": 15, \"brand\": \"home cooking\", \"size\": \"small\"}, \"1022\": {\"name\": \"lime salt\", \"price\": 20, \"quantity\": 12, \"brand\": \"select\", \"size\": \"small\"}, \"1023\": {\"name\": \"soy souce\", \"price\": 40, \"quantity\": 15, \"brand\": \"select\", \"size\": \"small\"}, \"1024\": {\"name\": \"ketchep\", \"price\": 55, \"quantity\": 13, \"brand\": \"kissan\", \"size\": \"medium\"}, \"1025\": {\"name\": \"lollipop\", \"price\": 10, \"quantity\": 15, \"brand\": \"jolly rancher\", \"size\": \"small\"}, \"1026\": {\"name\": \"rice\", \"price\": 250, \"quantity\": 45, \"brand\": \"ashirvad\", \"size\": \"big\"}, \"1027\": {\"name\": \"shampoo\", \"price\": 50, \"quantity\": 14, \"brand\": \"loreal\", \"size\": \"small\"}, \"1028\": {\"name\": \"tooth paste\", \"price\": 45, \"quantity\": 13, \"brand\": \"colgate\", \"size\": \"medium\"}, \"1029\": {\"name\": \"paper plates\", \"price\": 30, \"quantity\": 20, \"brand\": \"select\", \"size\": \"big\"}, \"1030\": {\"name\": \"soap\", \"price\": 35, \"quantity\": 30, \"brand\": \"santoor\", \"size\": \"medium\"}}'"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "b-afjnCgM23n",
+        "outputId": "c42674fc-a92c-45ff-c9c3-8de4cf6adfa0"
+      },
+      "source": [
+        "print(\"the products we offer\")\n",
+        "\n",
+        "for i in products.keys():\n",
+        "  print(i,products[i][\"name\"],\" = \",products[i][\"price\"])"
+      ],
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "the products we offer\n",
+            "1001 aata  =  200\n",
+            "1002 bun  =  20\n",
+            "1003 biscut  =  30\n",
+            "1004 butter  =  45\n",
+            "1005 brownsugar  =  70\n",
+            "1006 creame sauce  =  120\n",
+            "1007 chocolates  =  60\n",
+            "1008 chicken broth  =  80\n",
+            "1009 cereal  =  250\n",
+            "1010 dryfruits  =  120\n",
+            "1011 flour  =  150\n",
+            "1012 flax seeds  =  60\n",
+            "1013 garlic powder  =  50\n",
+            "1014 ice cream  =  30\n",
+            "1015 jam  =  40\n",
+            "1016 jaggery  =  35\n",
+            "1017 juice  =  25\n",
+            "1018 mustard seed  =  15\n",
+            "1019 canned tomatoes  =  40\n",
+            "1020 sprouts  =  20\n",
+            "1021 onion powder  =  35\n",
+            "1022 lime salt  =  20\n",
+            "1023 soy souce  =  40\n",
+            "1024 ketchep  =  55\n",
+            "1025 lollipop  =  10\n",
+            "1026 rice  =  250\n",
+            "1027 shampoo  =  50\n",
+            "1028 tooth paste  =  45\n",
+            "1029 paper plates  =  30\n",
+            "1030 soap  =  35\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VQI5JkRRM3E_",
+        "outputId": "1a5fa06f-8297-4db0-b35f-b844b1180882"
+      },
+      "source": [
+        "print(\"enter the items you want\")\n",
+        "\n",
+        "ui_product = int(input(\"enter product id you want:\"))\n",
+        "ui_quant   = int(input(\"how much quantity:\"))\n",
+        "bill_amount = 0\n",
+        "for i in products.keys():\n",
+        "    if (i == ui_product):\n",
+        "      print(\"********************\")\n",
+        "      print(\"name:\",products[i][\"name\"])\n",
+        "      print(\"price\",products[i][\"price\"])\n",
+        "      print(\"quant:\",ui_quant)\n",
+        "      print(\"********\")\n",
+        "      bill_amount = (ui_quant * products[i][\"price\"])\n",
+        "      print(\"bill amount:\",bill_amount)\n",
+        "      print(\"********\")"
+      ],
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the items you want\n",
+            "enter product id you want:1001\n",
+            "how much quantity:2\n",
+            "********************\n",
+            "name: aata\n",
+            "price 200\n",
+            "quant: 2\n",
+            "********\n",
+            "bill amount: 400\n",
+            "********\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CBW_v22VM3Sw",
+        "outputId": "255f62c2-af8b-4a24-83e7-6e9bd6840ce6"
+      },
+      "source": [
+        "if (bill_amount >= 1000):\n",
+        "  discount = (bill_amount * (10/100))\n",
+        "  print(\"dicount alloted\",bill_amount)\n",
+        "if (bill_amount <1000):\n",
+        "  print(\"No Discount\")"
+      ],
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "No Discount\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "3QG7_gJKOdZt"
+      },
+      "source": [
+        "if(bill_amount >= 1000):\n",
+        " print('want coupons or discount ')\n",
+        " print('enter 1 if you want coupons')\n",
+        " print (\"enter 2 if u want discount\")"
+      ],
+      "execution_count": 16,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "vG39p7rINyfk"
+      },
+      "source": [
+        "if(bill_amount >= 1000):\n",
+        " print('final_bill =', (bill_amount-discount))"
+      ],
+      "execution_count": 13,
+      "outputs": []
+    }
+  ]
+}
